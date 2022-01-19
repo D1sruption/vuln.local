@@ -1,5 +1,1 @@
-{
-    "mode": "auto",
-    "desiredHeat": 760,
-    "desiredCool": 800
-}
+{"mode":"setHold","desiredHeat":"790","desiredCool":"730"}

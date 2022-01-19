@@ -61,6 +61,7 @@ async function get_initial() {
 
             console.log("\n[+] Received Authorization:")
             console.log("   [+] Refresh Token: " + refresh_token)
+            console.log("   [+] Access Token: " + access_token + "\n")
 
         }
     );
@@ -146,6 +147,7 @@ async function parse_thermostat(token_obj, thermostat_obj) {
 }
 
 async function set_temp(token_obj, mode, heatTemp, coolTemp) {
+    //console.log("MODE: ".concat(mode).concat(" HEAT: ".concat(heatTemp).concat(" COOL: ").concat(coolTemp)))
     var r_body = 
     {
         "selection": {
@@ -174,7 +176,7 @@ async function set_temp(token_obj, mode, heatTemp, coolTemp) {
             'Authorization': 'Bearer ' + token_obj.access_token
         }
     }
-
+    //console.log(JSON.stringify(r_body))
     console.log("\n[+] New Settings:")
 
     request.post(temp_url, options, 
@@ -194,7 +196,9 @@ async function set_temp(token_obj, mode, heatTemp, coolTemp) {
 }
 
 //get_pin(apiKey);
-get_initial();
+//get_initial();
 // get_at(rt, apiKey)
 //get_thermostat(token_obj)
 //set_temp(token_obj, "setHold", 750, 780)
+
+module.exports = {get_initial};
