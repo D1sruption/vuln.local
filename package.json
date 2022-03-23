@@ -3,9 +3,9 @@
     "productName": "ecobee",
     "version": "0.1.0",
     "description": "H4CyberSec",
-    "main": "index.js",
+    "main": "http.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node http.js"
     },
     "keywords": [],
     "author": "Ignition",
